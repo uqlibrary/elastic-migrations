@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-use Elastic\Elasticsearch\Client;
+use OpenSearch\Client;
 use Elastic\Migrations\Facades\Index;
 use Elastic\Migrations\MigrationInterface;
 

@@ -1,5 +1,5 @@
 {
-    "name": "babenkoivan/elastic-migrations",
+    "name": "uqlibrary/elastic-migrations",
     "description": "Elasticsearch migrations for Laravel",
     "keywords": [
         "laravel",
@@ -41,7 +41,8 @@
     },
     "require": {
         "php": "^7.4 || ^8.0",
-        "babenkoivan/elastic-adapter": "^3.2"
+        "uqlibrary/elastic-client": "dev-master",
+        "uqlibrary/elastic-adapter": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
@@ -62,5 +63,15 @@
                 "Elastic\\Migrations\\ServiceProvider"
             ]
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:uqlibrary/elastic-client"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@github.com:uqlibrary/elastic-adapter"
+        }
+    ]
 }

@@ -3,12 +3,11 @@
 namespace Elastic\Migrations\Tests\Integration;
 
 use Elastic\Client\ServiceProvider as ClientServiceProvider;
-use Elastic\Elasticsearch\Client;
-use Elastic\Elasticsearch\ClientBuilder;
+use OpenSearch\Client;
+use OpenSearch\ClientBuilder;
 use Elastic\Migrations\ServiceProvider as MigrationsServiceProvider;
 use Illuminate\Config\Repository;
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
-use Psr\Http\Client\ClientInterface;
 
 class TestCase extends TestbenchTestCase
 {
@@ -31,10 +30,7 @@ class TestCase extends TestbenchTestCase
         $this->config->set('elastic.migrations.storage.default_path', realpath(__DIR__ . '/../migrations'));
 
         $app->singleton(Client::class, function () {
-            $httpClientMock = $this->createMock(ClientInterface::class);
-
             return ClientBuilder::create()
-                ->setHttpClient($httpClientMock)
                 ->build();
         });
     }
