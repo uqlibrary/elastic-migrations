@@ -73,5 +73,7 @@
             "type": "vcs",
             "url":  "git@github.com:uqlibrary/elastic-adapter"
         }
-    ]
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
