@@ -41,8 +41,8 @@
     },
     "require": {
         "php": "^7.4 || ^8.0",
-        "uqlibrary/elastic-client": "dev-master",
-        "uqlibrary/elastic-adapter": "dev-master"
+        "uqlibrary/elastic-client": "^1.0",
+        "uqlibrary/elastic-adapter": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
@@ -74,6 +74,5 @@
             "url":  "git@github.com:uqlibrary/elastic-adapter"
         }
     ],
-    "minimum-stability": "dev",
     "prefer-stable": true
 }
